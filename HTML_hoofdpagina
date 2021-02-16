@@ -1,1 +1,13 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Titel van de webpagina -->
+		<title>Syscribe</title>
+  </head>
+	<body>
+		<!-- Aanmaak van een id -->
+		<div id="container">
+			<div id="header">
+				<!-- Titel van de header -->
+				<h1>Challenges voor de Broken Access Control</h1>
+			</div>
