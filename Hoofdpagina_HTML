@@ -3,7 +3,7 @@
 	<head>
 		<!-- Titel van de webpagina -->
 		<title>Syscribe</title>
-  </head>
+  	</head>
 	<body>
 		<!-- Aanmaak van een id -->
 		<div id="container">
