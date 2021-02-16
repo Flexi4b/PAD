@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <title>SYSCRIBE</title>
+</head>
+<body>
+    <div class="login-container">
+        <form method="POST" class="login-form">
+            <input class="form-field" type="text" placeholder="Username" name="username" id="username" required>
+            <input class="form-field" type="password" placeholder="Password" name="psw" id="psw" required>
+            <p class="lbl-login-fail" id="lbl-error" style="display: none;">Password or Username wrong, pleas try again.</p>
+            <input id="btn-submit" class="login-button" type="submit" value="Login">
+            <div class="login-links">
+                <a href="#" class="link">Forgot Password?</a>
+                <p>or</p>   
+                <a href="#" class="link">Sign up</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
