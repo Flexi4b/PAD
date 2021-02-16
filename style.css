@@ -26,6 +26,7 @@ html{
     margin-bottom: 10px;
     background-color: #474B4F;
     color: black;
+    font-size: 16px;
 }
 
 .login-links{
@@ -43,10 +44,11 @@ html{
 }
 
 .login-button{
+    margin-top: 5px;
     background-color: #86C232;
     border-radius: 15px;
     border: none;
-    padding: 10px 20px;
+    padding: 8px;
     color: black;
-    font-size: larger;
+    font-size: 18px;
 }
