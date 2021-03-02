@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Syscribe - Challenge 1</title>
+    <link rel="stylesheet" type="text/css" href="Challenge_1.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Mijn blog</h1>
+            <div id="foto1">
+                <img src="Bedrijf.jpg" alt="Blog">
+            </div>
+
+            <div id="foto2">
+                <img src="Website.jpg" alt="Blog" style="width:200px;height:150px">
+            </div>
+
+        </div>
+
+        <div id="nav">
+            <h3>Navigatie</h3>
+            <ul>
+                <li><a class="selected" href="">Startpagina  ></a></li>
+                <br>
+                <li><a class="selected" href="">Login  ></a></li>
+                <br>
+                <li><a class="selected" href="">Over ons  ></a></li>
+                <br>
+                <li><a class="selected" href="">Contact  ></a></li>
+                <br>
+                <li><a class="selected" href="">Multimedia  ></a></li>
+            </ul>
+        </div>
+
+        <div id="main">
+            <h2>Startpagina</h2>
+
+                <div id="foto3">
+                    <img src="UMC_Utrecht.jpg" alt="Blog" style="width:450px;height:250px">
+                </div>
+        </div>
+
+        <div id="footer">
+
+            Copyright &copy; 2020 Mijn blog
+        </div>
+
+    </div>
+</body>
+</html>
