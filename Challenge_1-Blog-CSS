@@ -1,35 +1,26 @@
 body {
-    /* Achtergrond kleur */
-    background-color: purple;
-    /* De soort rand, in dit geval volledig gevuld */
+    background-color: darkturquoise;
     border-style: solid;
-    /* De kleur van de rand */
     border-color: black;
-    /* De breedte van de rand */
     border-width: 5px;
-    /* De breedte */
-    width: 1250px;
-    /* De marge naar links */
     margin-left: auto;
-    /* De marge naar rechts */
     margin-right: auto;
-    /* De lettertype stylen */
     font-family: Helvetica, Arial, sans-serif;
 }
 
 a {
-    /* Een decoratie toevoegen */
-    text-decoration: bold;
-    /* Een kleur geven */
     color: red;
 }
 
 h1, h2, h3 {
-    /* Een marge geven */
     margin: 0;
 }
 
-/* De id open om het op te maken */
+h1 {
+    font-family: 'Brush Script MT';
+    font-size: 275%;
+}
+
 #container {
     background-color: white;
     width: 1250px;
@@ -38,20 +29,15 @@ h1, h2, h3 {
 }
 
 #header {
-    background-color: orange;
+    background-color: hotpink;
     color: black;
-    /* De hoogte */
     height: 200px;
-    /* Waar de text komt te staan */
     text-align: center;
-    /* Hoeveel opvulling er omheen is */
     padding: 10px;
-    /* Alleen een rand aan de onderkant */
     border-bottom: 5px solid black;
 }
 
 #foto1 {
-    /* Aan welke zijde het hoort te komen */
     float: left;
 }
 
@@ -76,7 +62,7 @@ h1, h2, h3 {
 }
 
 #nav {
-    width: 200px;
+    width: 150px;
     padding: 10px;
     float: right;
     border-style: solid;
@@ -85,27 +71,25 @@ h1, h2, h3 {
 }
 
     #nav ul {
-        /* Welke style de list moet krijgen */
         list-style-type: none;
         padding: 0;
+        text-align:center;
+        color: red;
     }
 
 #main {
     width: 1000px;
-    height: 400px;
+    height: 860px;
     padding: 10px;
     text-align: left;
 }
-
-
+    
 
 #footer {
-    /* Dit zorgt dat het onder het gene komt wat er boven zat */
     clear: both;
     padding: 10px;
-    background-color: grey;
+    background-color: black;
     color: white;
     text-align: right;
-    /* Alleen een rand aan de bovenkant */
     border-top: 5px solid black;
 }
