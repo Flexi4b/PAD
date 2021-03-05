@@ -8,7 +8,11 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-a {
+.admin {
+    color: white;
+}
+
+.selected {
     color: red;
 }
 
@@ -41,18 +45,6 @@ h1 {
     float: left;
 }
 
-#foto2 {
-    float: right;
-}
-
-#foto4 {
-    text-align: center;
-}
-
-
-#foto7 {
-    text-align: center;
-}
 
 #login {
     width: 1000px;
