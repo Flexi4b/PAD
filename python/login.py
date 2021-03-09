@@ -17,10 +17,10 @@ def application(environ, start_response):
 
 # Moet nog juiste gegevens
     db = mysql.connector.connect(
-    host="localhost",
-    user="PAD",
-    password="IC103A",
-    database="PAD"
+    host="localhost:3306",
+    user="root",
+    password="Welkom01",
+    database="zkokr14"
     )
     dbcursor = db.cursor()
 
