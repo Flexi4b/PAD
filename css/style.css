@@ -183,3 +183,126 @@ header{
         width: 100%;
     }
 }
+
+
+/* challenges pagina css */
+
+.challenges{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15vw;
+    flex-wrap: wrap;
+}
+
+.challenge{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px; 
+    border-color: #474B4F;
+    margin: 10px;
+    color: white;
+    width: 290px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: space-around;
+    
+}
+
+.challenge h1 {
+    padding-bottom: 20px;
+}
+
+.attempt-button{
+    background-color: #86C232;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+}
+
+/* scoreboard css */
+
+.scoreboard-top3{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10vw;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: flex-end;
+    color: #86C232;
+}
+
+.tribune{
+    margin: 2px;
+}
+.top2{
+    width: 300px;
+    background-color: #86C232;
+    height: 200px;
+    border-radius: 30px 30px 5px 5px;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top1{
+    width: 300px;
+    height: 300px;
+    background-color: #86C232;
+    border-radius: 30px 30px 5px 5px;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top3{
+    width: 300px;
+    height: 100px;
+    background-color: #86C232;
+    border-radius: 30px 30px 5px 5px;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* table desing */
+
+.table-top50{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2vw;
+    flex-wrap: wrap;
+    color: #86C232;
+}
+
+.table-top50 table{
+    border-color: #86C232;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px; 
+    width: 100px;
+}
+
+.table-top50 table th, td{
+    border-style: solid;
+    border-color: #86C232;
+}
