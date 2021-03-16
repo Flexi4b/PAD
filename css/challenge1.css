@@ -35,12 +35,10 @@ header{
     width: 75%;
 }
 
-.fakeimg {
-    background-color: #eea29a;
+img {
     width: 100%;
-    padding: 20px;
-    height: 100px;
-    text-align: center;
+    height: auto;
+    max-width: 1000px;
 }
 
 .selected{
@@ -92,4 +90,3 @@ footer {
     }
   }
 
-/* damm github */
