@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
+    <title>SYSCRIBE</title>
+</head>
+<body>
+    <header>
+        <div id="hamburger" onclick="openFunction()">&#9776;</div>
+        <div id="menu" class="sidemenu">
+            <a href="../index.html" id="actueel">HOME</a>
+            <a href="scoreboard.html">SCOREBOARD</a>
+            <a href="progress.html">CHALLENGES</a>
+            <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+        </div>
+        <pre class="logo-ascii">
+
+              ██████ ▓██   ██▓  ██████  ▄████▄   ██▀███   ██▓ ▄▄▄▄   ▓█████ 
+            ▒██    ▒  ▒██  ██▒▒██    ▒ ▒██▀ ▀█  ▓██ ▒ ██▒▓██▒▓█████▄ ▓█   ▀ 
+            ░ ▓██▄     ▒██ ██░░ ▓██▄   ▒▓█    ▄ ▓██ ░▄█ ▒▒██▒▒██▒ ▄██▒███   
+              ▒   ██▒  ░ ▐██▓░  ▒   ██▒▒▓▓▄ ▄██▒▒██▀▀█▄  ░██░▒██░█▀  ▒▓█  ▄ 
+            ▒██████▒▒  ░ ██▒▓░▒██████▒▒▒ ▓███▀ ░░██▓ ▒██▒░██░░▓█  ▀█▓░▒████▒
+            ▒ ▒▓▒ ▒ ░   ██▒▒▒ ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░░ ▒▓ ░▒▓░░▓  ░▒▓███▀▒░░ ▒░ ░
+            ░ ░▒  ░ ░ ▓██ ░▒░ ░ ░▒  ░ ░  ░  ▒     ░▒ ░ ▒░ ▒ ░▒░▒   ░  ░ ░  ░
+            ░  ░  ░   ▒ ▒ ░░  ░  ░  ░  ░          ░░   ░  ▒ ░ ░    ░    ░   
+                  ░   ░ ░           ░  ░ ░         ░      ░   ░         ░  ░
+                      ░ ░              ░                           ░             
+        </pre>
+        <a href="login.html" class="login" id="login-site">Login</a>
+    </header>
+
+
+    <div class="midden-scherm">
+            <h3>Restricted Access</h3>
+            <br>
+            <br>
+            <br>
+            <p>SYSCRIBE<p>
+            <p>www.cryptobank.com/admin</p>
+            <br>
+            <p>This page is blocked, you do not have access to visit this page.</p>
+            <br>
+            <br>
+            <p>To continue this challenge go back to the cryptobank page by pressing the left pointing arrow in the top-left corner</p>
+            <br>
+            <button onclick="myFunction()">Click here for a hint</button>
+
+            <p id="hint"></p>
+
+            <script>
+            function myFunction() {
+                document.getElementById("hint").innerHTML = "Find a sub-page in the admin page";
+            }
+            </script>
+
+    </div>
+</body>
+<script src="../javascript/sidebar.js" type="text/javascript"></script>
+</html>
