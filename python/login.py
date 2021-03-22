@@ -1,4 +1,3 @@
-# nog methods importeren
 import mysql.connector
 
 def application(environ, start_response):
@@ -21,13 +20,13 @@ def application(environ, start_response):
         user='root',
         password='Welkom01',
         host='172.17.0.3',
-        database='zkokr14')
+        database='pad')
     dbcursor = db.cursor()
 
-    username = params.get('userid', [''])[0]
-    password = params.get('password', [''])[0]
+    username = params.get('username', [''])[0]
+    password = params.get('psw', [''])[0]
 
-    query = "SELECT username FROM PAD WHERE username='{fuser}' AND password='{fpassword}'".format(fuser = username, fpassword = password)
+    query = "SELECT username FROM pad WHERE username='{fuser}' AND password='{fpassword}'".format(fuser = username, fpassword = password)
     dbcursor.execute(query)
     result = dbcursor.fetchall()
 
