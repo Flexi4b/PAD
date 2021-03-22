@@ -1,5 +1,6 @@
-# nog methods importeren
+import urllib.parse as urlparse
 import mysql.connector
+
 
 def application(environ, start_response):
     status = '200 OK'
@@ -21,13 +22,13 @@ def application(environ, start_response):
         user='root',
         password='Welkom01',
         host='172.17.0.3',
-        database='zkokr14')
+        database='pad')
     dbcursor = db.cursor()
 
-    username = params.get('userid', [''])[0]
+    username = params.get('username', [''])[0]
     password = params.get('password', [''])[0]
 
-    query = "SELECT username FROM PAD WHERE username='{fuser}' AND password='{fpassword}'".format(fuser = username, fpassword = password)
+    query = "SELECT naam FROM Speler WHERE naam='{fusername}' AND wachtwoord='{fpassword}'".format(fusername=password, fpassword=username)
     dbcursor.execute(query)
     result = dbcursor.fetchall()
 
