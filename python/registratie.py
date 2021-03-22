@@ -1,4 +1,6 @@
-# nog methods importeren
+import urllib.parse as urlparse
+import mysql.connector
+
 
 def application(environ, start_response):
     status = '200 OK'
@@ -17,17 +19,16 @@ def application(environ, start_response):
 
 # Moet nog juiste gegevens
     db = mysql.connector.connect(
-    host="localhost",
-    user="PAD",
-    password="IC103A",
-    database="PAD"
-    )
+        user='root',
+        password='Welkom01',
+        host='172.17.0.3',
+        database='pad')
     dbcursor = db.cursor()
 
-    username = params.get('userid', [''])[0]
-    password = params.get('password', [''])[0]
+    username = params.get('reg-username', [''])[0]
+    password = params.get('reg-password', [''])[0]
 
-    query = "SELECT username FROM PAD WHERE username='{fuser}'".format(fuser = username)
+    query = "SELECT username FROM Speler WHERE username='{fuser}'".format(fuser=username)
     dbcursor.execute(query)
     result = dbcursor.fetchall()
 
@@ -42,7 +43,7 @@ def application(environ, start_response):
         html += ' </body>\n'
         html += '</html>\n'
     else:
-        query = "INSERT INTO PAD (gebruikersnaam, wachtwoord) VALUES  ({fuser}, {fpassword})".format(fuser = username, fpassword = password)
+        query = "INSERT INTO Speler (naam, wachtwoord) VALUES  ({fuser}, {fpassword})".format(fuser=username, fpassword=password)
         dbcursor.execute(query)
         html = ''
         html += '<html>\n'
