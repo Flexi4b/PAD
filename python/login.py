@@ -1,4 +1,6 @@
+import urllib.parse as urlparse
 import mysql.connector
+
 
 def application(environ, start_response):
     status = '200 OK'
@@ -26,7 +28,7 @@ def application(environ, start_response):
     username = params.get('username', [''])[0]
     password = params.get('psw', [''])[0]
 
-    query = "SELECT username FROM pad WHERE username='{fuser}' AND password='{fpassword}'".format(fuser = username, fpassword = password)
+    query = "SELECT naam FROM Speler WHERE naam='{fusername}' AND wachtwoord='{fpassword}'".format(fusername=password, fpassword=username)
     dbcursor.execute(query)
     result = dbcursor.fetchall()
 
