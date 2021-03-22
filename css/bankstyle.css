@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: firebrick;
+    background-color: papayawhip;
     background-image: url("../photo/achtergrond.png");
     /*voor de gehele site heb ik een rode achtergrond gekozen met een transperante foto*/
 }
@@ -19,14 +19,14 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: firebrick;
+    background-color: papayawhip;
     overflow-x: hidden;
     padding-top: 20px;
     /*Ik heb de navigatiebar statisch gemaakt omdat ik dat mooier vond, deze is oranje voor kleursverschil.*/
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
     transition: margin-left .5s;
     padding: 20px;
@@ -40,8 +40,8 @@ a {
     width: 50%;
     padding: 10px;
     border-style: solid;
-    border-color: #f5f5dc;
-    color: white;
+    border-color: navajowhite;
+    color: black;
     /*heb de hoofdtekst omsingeld door een beige omlijning, ik vond het zonder een nogal eentonige site. Gekozen voor witte letters weer die gecentreerd word.*/
 }
 
@@ -50,7 +50,7 @@ a {
     width: 50%;
     padding: 10px;
     border-style: solid;
-    border-color: #f5f5dc;
+    border-color: navajowhite;
     /*Voor het contact gedeelte heb ik precies hetzelfde gedaan als bij de hoofdtekst*/
 }
 
