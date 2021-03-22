@@ -19,13 +19,11 @@
             </div>
     </header>
     <div class="login-container">
-        <form method="POST" class="login-form">
+        <form method="POST" class="login-form" action="../python/registratie.py">
             
-            <input class="form-field" type="text" placeholder="Email" name="email" id="email" required>
+            <input class="form-field" type="text" placeholder="Email" name="email" id="reg-email" required>
             <input class="form-field" type="text" placeholder="Username" name="username" id="reg-username" required>
             <input class="form-field" type="password" placeholder="Password" name="password" id="reg-password" required>
-            <input class="form-field" type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-            <p class="lbl-login-fail" id="lbl-error" style="display: none;">Password or Username wrong, pleas try again.</p>
             <input id="btn-submit" class="login-button" type="submit" value="Login">
             <div class="login-links">
                 <p>Already have an acount?</p>
