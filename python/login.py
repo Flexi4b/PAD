@@ -26,7 +26,7 @@ def application(environ, start_response):
     dbcursor = db.cursor()
 
     username = params.get('username', [''])[0]
-    password = params.get('psw', [''])[0]
+    password = params.get('password', [''])[0]
 
     query = "SELECT naam FROM Speler WHERE naam='{fusername}' AND wachtwoord='{fpassword}'".format(fusername=password, fpassword=username)
     dbcursor.execute(query)
