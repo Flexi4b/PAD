@@ -30,28 +30,33 @@
             <p>
                 Gekoppelde accounts:<!-- Een stuk tekst op de pagina -->
             </p>
-            <div class="flip-card" style="float: left;">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="../photo/ingrid.jfif" alt="Avatar" style="width:400px;height:400px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1>Margot Beijsma</h1>
-                        <p>bc1q22sw5y8mxx8cc97lyldlysxjk9nuy30g20ca02</p>
-                        <a href="../html/cryptobank.html" ></a>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card" style="float: right;">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="../photo/ferfer.png" alt="Avatar" style="width:400px;height:400px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1>Ferfer</h1>
-                        <p>bc1q7kreewvuzhvjqweq3w4rwucf3dexw7zwgjjyk5</p>
-                    </div>
-                </div>
+            <div id="login">
+                <h2>Log in:</h2><br>
+                <!-- Aanmaak van een form -->
+                <form name="login" method="post" action="HTML_Succesvolle_Login.html">
+                    <!-- Input voor de Gebruikersnaam en Wachtwoord -->
+                    Gebruikersnaam: <input type="text" name="userid" /><br><br>
+                    Wachtwoord: <input type="password" name="pswrd" /><br><br>
+                    <!-- Knoppen aanmaken -->
+                    <input type="submit" onclick="return check(this.form)" value="Login" />
+                    <input type="reset" value="Cancel" />
+                </form>
+                <!-- Start van een script met als taal Javascript -->
+                <script language="javascript">// Function checkt of er een form is
+                        function check(form) {
+                        // Begin if statement, hierin wordt gechekt of dat het Gebruikersnaam overeenkomt met het Wachtwoord
+                        if(form.userid.value == "margotb" && form.pswrd.value == "password") {
+                        // Komt het overeen dan wordt het goed gekeurd
+                        return true;
+                        // Zodra het dus overeenkomt wordt de nieuwe pagina geopent
+                        window.open('HTML_Succesvolle_Login.html')
+                        }
+                        // Als het inlog niet overeenkomt met wat hierboven staat dan geeft de webpagina een Error
+                        else {
+                        alert("Error, Verkeerde Gebruikersnaam en/of Wachtwoord")
+                        return false;
+                        }
+                        }</script>
             </div>
 
 
