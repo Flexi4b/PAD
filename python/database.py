@@ -3,7 +3,7 @@ cnx = mysql.connector.connect(
     user='root',
     password='Welkom01',
     host='172.17.0.3',
-    database='pad')
+    database='zkokr14')
 
 cursor = cnx.cursor()
 
