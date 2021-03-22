@@ -1,0 +1,60 @@
+﻿body {
+    background-color: firebrick;
+    background-image: url("achtergrond.png");
+    /*voor de gehele site heb ik een blauwe achtergrond gekozen met een transperante foto*/
+}
+
+.titel {
+    text-align: center;
+    font-size: 60px;
+    color: #f5f5dc;
+    text-shadow: 2px 2px 5px black;
+    /*Mijn bedrijfsnaam in het midden oranje gemaakt 60 pixels en een schaduw gegeven*/
+}
+
+.menu {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: firebrick;
+    overflow-x: hidden;
+    padding-top: 20px;
+    /*Ik heb de navigatiebar statisch gemaakt omdat ik dat mooier vond, deze is oranje voor kleursverschil.*/
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: margin-left .5s;
+    padding: 20px;
+    font-size: 27px;
+    /*alle linkjes en adressen wit gemaakt en 27 pixels en netjes neergezet na wat spelen*/
+}
+
+.hoofdtekst {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-style: solid;
+    border-color: #f5f5dc;
+    color: white;
+    /*heb de hoofdtekst omsingeld door een oranje omlijning, ik vond het zonder een nogal eentonige site. Gekozen voor witte letters weer die gecentreerd word.*/
+}
+
+.contact {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-style: solid;
+    border-color: #f5f5dc;
+    /*Voor het contact gedeelte heb ik precies hetzelfde gedaan als bij de hoofdtekst*/
+}
+
+h2 {
+    color: #f5f5dc;
+    /*header 2 moest oranje tekst van kleur worden*/
+}
