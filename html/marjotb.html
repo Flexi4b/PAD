@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <!-- Hier koppel ik mijn index aan het CSS zodat elke pagina er hetzelfde uitziet-->
+        <link rel="stylesheet" href="../css/bankstyle.css">
+    </head>
+    <body>
+        <!--Bij elke div geef je er een naam aan zodat je het in het css kan stylen naar wens, zoals hier titel staat-->
+        <div class="titel">
+            <h1>CRYPTOB4NK</h1> <!-- Hier zie je mijn header waar de bedrijfsnaam staat -->
+        </div>
+
+        <div>
+            <div class="hoofdtekst">
+                <h3>Restricted Access</h3>
+                <br>
+                <br>
+                <br>
+                <p>CRYPTOB4NK<p>
+                <p>www.cryptobank.com/margotb</p>
+                <br>
+                <p>This page is blocked, you do not have access to visit this page.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button onclick="myFunction()">Click here for a hint</button>
+
+                <p id="hint"></p>
+
+                <script>
+                    function myFunction() {
+                        document.getElementById("hint").innerHTML = "Find a sub-page in this profile page with _";
+                    }
+                </script>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>
