@@ -1,7 +1,7 @@
 ﻿body {
     background-color: firebrick;
-    background-image: url("achtergrond.png");
-    /*voor de gehele site heb ik een blauwe achtergrond gekozen met een transperante foto*/
+    background-image: url("../photo/achtergrond.png");
+    /*voor de gehele site heb ik een rode achtergrond gekozen met een transperante foto*/
 }
 
 .titel {
@@ -9,7 +9,7 @@
     font-size: 60px;
     color: #f5f5dc;
     text-shadow: 2px 2px 5px black;
-    /*Mijn bedrijfsnaam in het midden oranje gemaakt 60 pixels en een schaduw gegeven*/
+    /* bedrijfsnaam in het midden beige gemaakt 60 pixels en een schaduw gegeven*/
 }
 
 .menu {
@@ -42,7 +42,7 @@ a {
     border-style: solid;
     border-color: #f5f5dc;
     color: white;
-    /*heb de hoofdtekst omsingeld door een oranje omlijning, ik vond het zonder een nogal eentonige site. Gekozen voor witte letters weer die gecentreerd word.*/
+    /*heb de hoofdtekst omsingeld door een beige omlijning, ik vond het zonder een nogal eentonige site. Gekozen voor witte letters weer die gecentreerd word.*/
 }
 
 .contact {
@@ -56,5 +56,5 @@ a {
 
 h2 {
     color: #f5f5dc;
-    /*header 2 moest oranje tekst van kleur worden*/
+    /*header 2 moest beige tekst van kleur worden*/
 }
