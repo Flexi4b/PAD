@@ -27,8 +27,9 @@ def application(environ, start_response):
 
     username = params.get('username', [''])[0]
     password = params.get('password', [''])[0]
+    email = params.get('email', [''])[0]
 
-    query = "INSERT INTO Speler (`email`, `password`, `username`) VALUES('insert@gmail.com', 'InsertTest', 'Insert')  "
+    query = "SELECT username FROM Speler WHERE username={}".format(username)
     dbcursor.execute(query)
     result = dbcursor.fetchall()
 
@@ -36,20 +37,22 @@ def application(environ, start_response):
         html = ''
         html += '<html>\n'
         html += ' <head>\n'
-        html += '  <title>Login</title>\n'
+        html += '  <title>registratie</title>\n'
         html += ' </head>\n'
         html += ' <body>\n'
-        html += '  <h1>inloggen gelukt</h1>\n'
+        html += '  <h1>Gebruikersnaan al in gebruik</h1>\n'
         html += ' </body>\n'
         html += '</html>\n'
     else:
+        query = "INSERT INTO Speler (username, password, email) VALUES  ({fuser}, {fpassword}, {femail})".format(fuser=username, fpassword=password, femail=email)
+        dbcursor.execute(query)
         html = ''
         html += '<html>\n'
         html += ' <head>\n'
-        html += '  <title>Login</title>\n'
+        html += '  <title>registratie</title>\n'
         html += ' </head>\n'
         html += ' <body>\n'
-        html += '  <h1>onjuist wachtwoord en/of gebruikersnaam</h1>\n'
+        html += '  <h1>welkom</h1>\n'
         html += ' </body>\n'
         html += '</html>\n'
 

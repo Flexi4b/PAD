@@ -3,18 +3,18 @@ cnx = mysql.connector.connect(
     user='root',
     password='Welkom01',
     host='172.17.0.3',
-    database='zkokr14')
+    database='pad')
 
 cursor = cnx.cursor()
 
-query = """SELECT naam, wachtwoord
+query = """SELECT username, password
     FROM Speler
-    WHERE naam = %(naam)s"""
+    WHERE username = %(username)s"""
 
-cursor.execute(query,{"naam": "klaas"})
+cursor.execute(query,{"username": "test"})
 
-for id_Naam, Wachtwoord in cursor:
-    print("Naam:", id_Naam, "\nWachtwoord:", Wachtwoord)
+for id_Username, password in cursor:
+    print("Username:", id_Username, "\nPassword:", password)
 
 cnx.commit()
 cursor.close
