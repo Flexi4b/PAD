@@ -1,0 +1,49 @@
+html{
+    background-image: url("../Photo/background3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.parent {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25vw;
+ }
+
+.form_login {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-content{
+    margin-bottom: 7px;
+    border: none;
+    border-bottom: 2px black;
+    border-radius: 4px;
+}
+
+.button{
+    border-radius: 10px;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 100px;
+    padding: 8px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 5px;
+    border: none;
+    background: rgb(207, 46, 212) ;
+}
