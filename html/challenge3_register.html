@@ -11,12 +11,23 @@
 </head>
 <body>
     <div class="parent">
-        <form class="form_login">
+        <form class="form_login" method="POST ">
+            <h1 class="text" >Register</h1>
             <input class="register-content" type="text" placeholder="Email" name="email" id="email" required>
             <input class="register-content" type="text" placeholder="Username" name="username" id="username" required>
             <input class="register-content" type="password" placeholder="Password" name="password" id="password" required>
-            <input type="checkbox" checked="checked" name="admin" placeholder="admin" style="visibility: ;">
-            <input class="button" type="submit" value="Register">
+            <input type="checkbox" name="admin" id="admin" style="visibility: hidden" autocomplete="off">
+            <input class="button" type="submit" value="Register" onsubmit = "Check()">
+            <script type="text/javascript">
+                function Check() {
+                    var admin = document.getElementById("admin");
+                    if (admin.checked) {
+                        location.replace("challenge3_adminpage.html");
+                    } else {
+                        alert("Wrong try again");
+                    }
+                }
+            </script>
         </form>
     </div>
 </body>

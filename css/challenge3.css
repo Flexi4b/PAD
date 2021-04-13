@@ -11,7 +11,7 @@ html{
 .parent {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25vw;
+    margin-top: 20vw;
  }
 
 .form_login {
@@ -22,17 +22,28 @@ html{
     background-color: whitesmoke;
     border-radius: 10px;
     padding: 10px;
-    padding-top: 20px;
-    width: 500px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
 
+.text{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 25px;
+}
+
 .register-content{
     margin-bottom: 7px;
-    border: none;
-    border-bottom: 2px black;
-    border-radius: 4px;
+    width: 350px;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button{
