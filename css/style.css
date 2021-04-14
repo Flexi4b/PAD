@@ -95,6 +95,7 @@ header{
 
 /* login en register form style */
 .login-form{
+    color: #86C232;
     margin-top: 15vw;
     max-width: 500px;
     margin-left: auto;
@@ -103,11 +104,11 @@ header{
     flex-direction: column;
 }
 
-
-/* kleur van ascii art */
-.login-ascii{
-    color: #86C232;
+.login-explain{
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
+
 
 .form-field{
     border-radius: 15px;
@@ -133,6 +134,10 @@ header{
     padding-right: 5px;
 }
 
+.login-foot{
+    margin-top: 10px;
+}
+
 .login-button{
     margin-top: 5px;
     background-color: #86C232;
@@ -143,6 +148,10 @@ header{
     font-size: 18px;
 }
 
+/* kleur van ascii art */
+.login-ascii{
+    color: #86C232;
+}
 /* animatie */
 
 #animation-text{
