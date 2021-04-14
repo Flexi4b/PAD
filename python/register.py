@@ -29,7 +29,7 @@ def application(environ, start_response):
     password = params.get('password', [''])[0]
     email = params.get('email', [''])[0]
 
-    query = "SELECT username FROM Speler WHERE username={}".format(username)
+    query = "SELECT username FROM Speler WHERE username='{fuser}'".format(fuser=username)
     dbcursor.execute(query)
     result = dbcursor.fetchall()
 
@@ -44,8 +44,10 @@ def application(environ, start_response):
         html += ' </body>\n'
         html += '</html>\n'
     else:
-        query = "INSERT INTO Speler (username, password, email) VALUES  ({fuser}, {fpassword}, {femail})".format(fuser=username, fpassword=password, femail=email)
+        query = "INSERT INTO pad.Speler (email,password,username) VALUES ('{femail}','{fpassword}','{fuser}')".format(femail=email, fpassword=password, fuser=username)
         dbcursor.execute(query)
+        db.commit()
+        db.close()
         html = ''
         html += '<html>\n'
         html += ' <head>\n'
