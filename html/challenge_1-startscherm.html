@@ -36,8 +36,12 @@
             <p>You're going to achieve this by findng the hidden link on the webpage, this link wil lead you to the admin page.</p>
             <p>Good luck and have fun!</p>
 
-            <form name="Start" method="post" action="challenge1.html">
-                <input type="submit" onclick="return check(this.form)" value="Start">
+            <form method="POST" class="login-form" action="../python/progression_start.py">
+                <input class="form-field" type="text" placeholder="Username" name="username" id="username" required>
+                <input class="form-field" type="password" placeholder="Password" name="password" id="password" required>
+                <input id="btn-submit" class="login-button" type="submit" value="Login">
+                <div class="login-links">
+                </div>
             </form>
         </div>
     </body>

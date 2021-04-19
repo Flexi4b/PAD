@@ -34,7 +34,9 @@ def application(environ, start_response):
 
     if result:
         query = "UPDATE `pad`.`Challenge1` SET `stop_time` = CURRENT_TIMESTAMP() WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')".format(fuser=username, fpassword=password)
+        query2 = "INSERT INTO `pad`.`Score` (`speler_id`, `score_challenge1`) VALUES ((SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}'), (SELECT TIMESTAMPDIFF (MINUTE, `start_time`, `stop_time`) FROM `pad`.`Challenge1` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')))" .format(fuser=username, fpassword=password)
         dbcursor.execute(query)
+        dbcursor.execute(query2)
         db.commit()
         db.close()
         html = ''
@@ -57,6 +59,5 @@ def application(environ, start_response):
         html += '  <h1>Inlog fout</h1>\n'
         html += ' </body>\n'
         html += '</html>\n'
-
 
     return [bytes(html, 'utf-8')]
