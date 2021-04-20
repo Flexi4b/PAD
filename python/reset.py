@@ -1,7 +1,3 @@
-import urllib.parse as urlparse
-import smtplib
-
-
 def application(environ, start_response):
     status = '200 OK'
     response_header = [('Content-type', 'text/html')]
@@ -16,17 +12,28 @@ def application(environ, start_response):
         input = environ['wsgi.input'].read().decode()
         params = urlparse.parse_qs(input)
 
-    rec_email = params.get('username', [''])[0]
 
-    sender_email = "syscribe@gmail.com"
-    password = "Hacker420"
-    message = """\
-    Subject: Reset your password
-    click on url to change password.\n \nurl here"""
-
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    mailFrom = 'syscribe@gmail.com'
+    mailTo = params.get('email', [''])[0]
+    subject = 'Password'
+    msg = 'Subject:{}\n\nDont forget your password anymore pipo.\nHere is a new one:\n{}'.format(subject, newPassword)
+    server = smtplib.SMTP('smtp.gmail.com:587')
     server.starttls()
-    server.login(sender_email, password)
-    print("Login success")
-    server.sendmail(sender_email, rec_email, message)
-    print("Email has been sent to ", rec_email)
+    server.ehlo()
+    server.login('syscribe@gmail.com', 'Hacker420')
+    print("login gelukt")
+    server.sendmail(mailFrom, mailTo, msg)
+    print("mail verstuurd")
+    server.quit()
+
+    html = ''
+    html += '<html>\n'
+    html += ' <head>\n'
+    html += '  <title>Reset</title>\n'
+    html += ' </head>\n'
+    html += ' <body>\n'
+    html += '  <h1>Mail verstuurd</h1>\n'
+    html += ' </body>\n'
+    html += '</html>\n'
+
+    return [bytes(html, 'utf-8')]
