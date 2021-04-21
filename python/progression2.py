@@ -33,7 +33,7 @@ def application(environ, start_response):
     result = dbcursor.fetchall()
 
     if result:
-        query2 = "SELECT `score_challenge1` FROM `pad`.`Score` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fusername}' AND `password` = '{fpassword}')".format(fusername=username, fpassword=password)
+        query2 = "SELECT `score_challenge2` FROM `pad`.`Score` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fusername}' AND `password` = '{fpassword}')".format(fusername=username, fpassword=password)
         dbcursor.execute(query2)
         result2 = dbcursor.fetchall()
         if result2:
@@ -48,7 +48,7 @@ def application(environ, start_response):
             html += '</html>\n'
         else:
             query = "UPDATE `pad`.`Challenge` SET `stop_time` = CURRENT_TIMESTAMP() WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')".format(fuser=username, fpassword=password)
-            query2 = "INSERT INTO `pad`.`Score` (`speler_id`, `score_challenge1`) VALUES ((SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}'), (SELECT TIMESTAMPDIFF (MINUTE, `start_time`, `stop_time`) FROM `pad`.`Challenge` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')))".format(fuser=username, fpassword=password)
+            query2 = "INSERT INTO `pad`.`Score` (`speler_id`, `score_challenge2`) VALUES ((SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}'), (SELECT TIMESTAMPDIFF (MINUTE, `start_time`, `stop_time`) FROM `pad`.`Challenge` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')))".format(fuser=username, fpassword=password)
             dbcursor.execute(query)
             dbcursor.execute(query2)
             db.commit()

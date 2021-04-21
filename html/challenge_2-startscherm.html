@@ -39,8 +39,12 @@
         <p>Xx_H@CK3R_xX</p>
         <br />
         <br />
-        <form name="Start" method="post" action="challenge2/cryptobank.html">
-            <input type="submit" onclick="return check(this.form)" value="Start" />
+        <form method="POST" class="login-form" action="../python/progression_start2.py">
+            <input class="form-field" type="text" placeholder="Username" name="username" id="username" required>
+            <input class="form-field" type="password" placeholder="Password" name="password" id="password" required>
+            <input id="btn-submit" class="login-button" type="submit" value="Login">
+            <div class="login-links">
+            </div>
         </form>
     </div>
 </body>
