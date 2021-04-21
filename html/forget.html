@@ -19,11 +19,11 @@
             </div>
     </header>
     <div class="login-container">
-        <form method="POST" class="login-form" action="../python/register.py">
+        <form method="POST" class="login-form" action="../python/reset.py">
             <h1>Forgot your Password?</h1>
             <p class="login-explain">Type your Email and we'll send you a link to reset your password</p>
-            <input class="form-field" type="text" placeholder="Email" name="email" id="email" required>
-            <input id="btn-submit" class="login-button" type="submit" value="Send Email">
+            <input class="form-field" type="text" placeholder="Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <input id="btn-submit" class="login-button" type="submit" value="send-email">
             <div class="login-links">
                 <p class="login-foot">Already have an acount?<a href="login.html" class="link">login here</a></p>
                 
