@@ -17,7 +17,7 @@
         <div class="row">
             <main class="leftcolumn">
                 <div class="card">
-                    <h2 class="datum">15/02/2018 Banaan- en aardbeiensmoothie</h2>
+                    <h2 class="datum">15/02/2021 Banaan- en aardbeiensmoothie</h2>
                     <p>
                         Goedendag en welkom bij mijn blog! <br> Het is vandaag 15 februari 2018 en ik heb een verrukkelijk smoothie recept dat ik met jullie wil delen, 
                         het is een banaan- en aardbeiensmoothie! Hier volgen de ingrdiënten en de bereidingswijze die je nodig zal hebben om het recept te maken.
@@ -61,7 +61,15 @@
                         <br>
                         <li><a class="selected" href="#">Contact</a></li>
                         <br>
-                        <li><a class="selected" href="#">Hints</a></li>
+                        <button onclick="myFunction()">Click here for a hint</button>
+
+                        <p id="hint"></p>
+
+                        <script>
+                            function myFunction() {
+                                document.getElementById("hint").innerHTML = "Use Ctrl-A";
+                            }
+                        </script>
                     </ul>
                 </nav>
             </div>
