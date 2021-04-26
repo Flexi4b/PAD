@@ -48,7 +48,7 @@ def application(environ, start_response):
             html += '</html>\n'
 
         else:
-            query3 = "SELECT start_time FROM Challenge WHERE speler_id = (SELECT speler_id FROM Speler WHERE username = '{fusername}' AND password = '{fpassword}')".format(fusername=username, fpassword=password)
+            query3 = "SELECT start_time FROM Challenge WHERE speler_id = (SELECT speler_id FROM Speler WHERE username = '{fusername}' AND password = '{fpassword}') AND challenge_id = 1".format(fusername=username, fpassword=password)
             dbcursor.execute(query3)
             result3 = dbcursor.fetchall()
             if result3:

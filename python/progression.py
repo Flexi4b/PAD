@@ -47,7 +47,7 @@ def application(environ, start_response):
             html += ' </body>\n'
             html += '</html>\n'
         else:
-            query = "UPDATE `pad`.`Challenge` SET `stop_time` = CURRENT_TIMESTAMP() WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')".format(fuser=username, fpassword=password)
+            query = "UPDATE `pad`.`Challenge` SET `stop_time` = CURRENT_TIMESTAMP() WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}') AND `challenge_id` = '1'".format(fuser=username, fpassword=password)
             query2 = "INSERT INTO `pad`.`Score` (`speler_id`, `score_challenge1`) VALUES ((SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}'), (SELECT TIMESTAMPDIFF (MINUTE, `start_time`, `stop_time`) FROM `pad`.`Challenge` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')))".format(fuser=username, fpassword=password)
             dbcursor.execute(query)
             dbcursor.execute(query2)

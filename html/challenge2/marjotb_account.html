@@ -4,6 +4,7 @@
 <head>
     <!-- Hier koppel ik mijn index aan het CSS zodat elke pagina er hetzelfde uitziet-->
     <link rel="stylesheet" href="../../css/challenge2.css">
+    
 </head>
 <body>
     <!--Bij elke div geef je er een naam aan zodat je het in het css kan stylen naar wens, zoals hier titel staat-->
@@ -57,13 +58,23 @@
         </div>
 
 
-        <div class="contact">
+        <div class="contact" >
+            <div style="float: left;">
             <!--Hier staat het contact kopje voor als klanten directe comminucatie willen-->
             <h2>Profiel aanpassen</h2> <!--Weer een header die de informatie inleid-->
                 <p>Wilt u uw profielpagina aanpassen? klik dan hier:</p>
                 <form method="POST" action="admin_c2.html">
                     <button type="submit">Profiel aanpassen</button>
                 </form>
+            </div>
+            
+            <form method="POST" class="login-form" action="../../python/progression2.py" style="float: right;">
+                <input class="form-field" type="text" placeholder="Username" name="username" id="username" required>
+                <input class="form-field" type="password" placeholder="Password" name="password" id="password" required>
+                <input id="btn-submit" class="login-button" type="submit" value="Login">
+                <div class="login-links">
+                </div>
+            </form>
         </div>
     </div>
 

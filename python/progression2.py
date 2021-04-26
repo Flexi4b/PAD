@@ -33,23 +33,13 @@ def application(environ, start_response):
     result = dbcursor.fetchall()
 
     if result:
-        query2 = "SELECT `score_challenge2` FROM `pad`.`Score` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fusername}' AND `password` = '{fpassword}')".format(fusername=username, fpassword=password)
+        query2 = "SELECT `score_challenge2` FROM `pad`.`Score` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fusername}' AND `password` = '{fpassword}') AND score_challenge2 IS NULL".format(fusername=username, fpassword=password)
         dbcursor.execute(query2)
         result2 = dbcursor.fetchall()
         if result2:
-            html = ''
-            html += '<html>\n'
-            html += ' <head>\n'
-            html += '  <title>Progression</title>\n'
-            html += ' </head>\n'
-            html += ' <body>\n'
-            html += '  <h1>you already completed this challenge</h1>\n'
-            html += ' </body>\n'
-            html += '</html>\n'
-        else:
-            query = "UPDATE `pad`.`Challenge` SET `stop_time` = CURRENT_TIMESTAMP() WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')".format(fuser=username, fpassword=password)
-            query2 = "INSERT INTO `pad`.`Score` (`speler_id`, `score_challenge2`) VALUES ((SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}'), (SELECT TIMESTAMPDIFF (MINUTE, `start_time`, `stop_time`) FROM `pad`.`Challenge` WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fuser}' AND `password` = '{fpassword}')))".format(fuser=username, fpassword=password)
+            query = "UPDATE `pad`.`Challenge` SET `stop_time` = CURRENT_TIMESTAMP() WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fusername}' AND `password` = '{fpassword}') AND challenge_id = 2".format(fusername=username, fpassword=password)
             dbcursor.execute(query)
+            query2 = "UPDATE `pad`.`Score` SET `score_challenge2` = (SELECT TIMESTAMPDIFF (MINUTE, `start_time`, `stop_time`) FROM `pad`.`Challenge` WHERE `challenge_id` = 2 AND  `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fusername}' AND `password` = '{fpassword}')) WHERE `speler_id` = (SELECT `speler_id` FROM `pad`.`Speler` WHERE `username` = '{fusername}' AND `password` = '{fpassword}')".format(fusername=username, fpassword=password)
             dbcursor.execute(query2)
             db.commit()
             db.close()
@@ -60,6 +50,17 @@ def application(environ, start_response):
             html += ' </head>\n'
             html += ' <body>\n'
             html += '  <h1>Score</h1>\n'
+            html += ' </body>\n'
+            html += '</html>\n'
+
+        else:
+            html = ''
+            html += '<html>\n'
+            html += ' <head>\n'
+            html += '  <title>Progression</title>\n'
+            html += ' </head>\n'
+            html += ' <body>\n'
+            html += '  <h1>you already completed this challenge!</h1>\n'
             html += ' </body>\n'
             html += '</html>\n'
 
