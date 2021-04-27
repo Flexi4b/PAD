@@ -68,6 +68,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 nav, h1{
@@ -81,5 +82,126 @@ nav, h1{
 .nav-left, a{
     color: black;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.whiteb{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.titels{
+    margin-left: 20px;
+    display:flex;
+    align-items: center;
+}
+
+.download-btn{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+}
+
+.update-text{
+    margin-left: 20px;
+    color:rgb(85, 85, 85);
+    font-weight:inherit;
+    font-size: 15px;
+}
+
+
+/* servere status pie chart */
+.pie-chart {
+    background:
+        radial-gradient(
+            circle closest-side,
+            white 0,
+            white 45.24%,
+            transparent 45.24%,
+            transparent 58%,
+            white 0
+        ),
+        conic-gradient(
+            #4e79a7 0,
+            #4e79a7 30%,
+            rgb(218, 218, 218) 0,
+            rgb(218, 218, 218) 100%
+    );
+    position: relative;
+    width: 500px;
+    min-height: 350px;
+    margin: 0;
+    outline: none;
+}
+.pie-chart h2 {
+    position: absolute;
+    margin: 1rem;
+}
+
+.pie-chart figcaption {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    font-size: smaller;
+    text-align: right;
+}
+.pie-chart span:after {
+    display: inline-block;
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.4em;
+    height: 0.8em;
+    border-radius: 0.2em;
+    background: currentColor;
+}
+
+/* server status layout */
+
+.server-status{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.server-info{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    width: 50%;
+
+}
+
+.table-layout{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.line-left{
+    border-right: 1px solid #ddd;
+}
+
+.up{
+    color: rgb(0, 196, 0);
+    text-align: center;
+}
+
+.down{
+    color: rgb(206, 33, 33);
+    text-align: center;
 }

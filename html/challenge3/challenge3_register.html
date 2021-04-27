@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/challenge3.css">
+    <link rel="stylesheet" type="text/css" href="../../css/challenge3.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <title>Register</title>
@@ -12,13 +12,13 @@
 <body>
     
     <div class="parent">
-        <form class="form_login" method="POST">
+        <form class="form_login" method="POST" onclick = "Check()">
             <h1 class="text" >Register</h1>
             <input class="register-content" type="text" placeholder="Email" name="email" id="email" required>
             <input class="register-content" type="text" placeholder="Username" name="username" id="username" required>
             <input class="register-content" type="password" placeholder="Password" name="password" id="password" required>
-            <input type="checkbox" name="admin" id="admin" hidden autocomplete="off">
-            <input class="button" type="submit" value="Register" onclick = "Check()">
+            <input type="checkbox" name="admin" id="admin" hidden autocomplete="off" required>
+            <input class="button" type="submit" value="Register" >
             <script type="text/javascript">
                 function Check() {
                     var admin = document.getElementById("admin");
@@ -28,7 +28,7 @@
                         alert("Wrong try again");
                     }
                 }
-                </script>
+            </script>
         </form>
     </div>
 </body>
