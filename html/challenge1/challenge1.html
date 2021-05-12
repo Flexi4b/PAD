@@ -9,6 +9,30 @@
 </head>
 <body>
     <div id="container">
+
+        <div>
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn" class="btn">Help</button>
+    
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+    
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="options">
+                    <p><button id="hint-btn" class="btn">Need a hint</button><br><br>or<br><br><button class="btn">want to quit?</button></p>
+                    <br>
+                    
+                </div>
+                <div id="hint" class="hint">
+                    <p>Hint:</p>
+                    <p>Look in the source code</p>
+                </div>
+            </div> 
+            </div>
+        </div>
+
         <header>
             <h1>Linda's food blog</h1>
         </header>
@@ -61,15 +85,6 @@
                         <br>
                         <li><a class="selected" href="#">Contact</a></li>
                         <br>
-                        <button onclick="myFunction()">Click here for a hint</button>
-
-                        <p id="hint"></p>
-
-                        <script>
-                            function myFunction() {
-                                document.getElementById("hint").innerHTML = "Use Ctrl-A";
-                            }
-                        </script>
                     </ul>
                 </nav>
             </div>
@@ -78,7 +93,7 @@
             <h3>Copyright &copy; 2021 Linda's food blog</h3>
             <a class="admin" href="../challenge1_complete.html">Admin</a>
         </footer>
-
+        <script src="../../javascript/popup.js" type="text/javascript"></script>
     </div>
 </body>
 </html>
