@@ -14,9 +14,9 @@
     <header>
         <div id="hamburger" onclick="openFunction()">&#9776;</div>
         <div id="menu" class="sidemenu">
-            <a href="../index.html" id="actueel">HOME</a>
-            <a href="scoreboard.html">SCOREBOARD</a>
-            <a href="progress.html">CHALLENGES</a>
+            <a href="/" id="actueel">HOME</a>
+            <a href="scoreboard">SCOREBOARD</a>
+            <a href="challenges">CHALLENGES</a>
             <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
         </div>
         <pre class="logo-ascii">
@@ -32,7 +32,7 @@
                   ░   ░ ░           ░  ░ ░         ░      ░   ░         ░  ░
                       ░ ░              ░                           ░
         </pre>
-        <a href="login.html" class="login" id="login-site">Login</a>
+        <a href="login" class="login" id="login-site">Login</a>
     </header>
     <article>
         <div class="scoreboard-top3">
@@ -61,15 +61,17 @@
         <div class="table-top50">
             <table>
                 <tr>
-                    {% for header in headings %}
-                    <th>{{header}}</th>
-                    {% endfor %}
+                    <th>Name</th>
+                    <th>Score1</th>
+                    <th>Score2</th>
+                    <th>Score3</th>
                 </tr>
-                {%for row in data%}
+                {% for row in score %}
                 <tr>
-                    {% for cell in row%}
-                    <td>{{ cell }}</td>
-                    {% endfor %}
+                    <td>{{row.0}}</td>
+                    <td>{{row.1}}</td>
+                    <td>{{row.2}}</td>
+                    <td>{{row.3}}</td>
                 </tr>
                 {% endfor %}
             </table>

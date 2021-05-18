@@ -176,3 +176,9 @@ def admin():
        session.pop('challenge1', None)
        return render_template('admin.html')
     return redirect(url_for('challenge1'))
+
+@app.route('/scoreboard')
+def scoreboard():
+    cursor.execute("SELECT `Speler`.`username`, `Score`.`score_challenge1`, `Score`.`score_challenge2`, `Score`.`score_challenge3`  FROM `pad`.`Score` INNER JOIN `pad`.`Speler` ON `>    data =cursor.fetchall()
+
+    return render_template("scoreboard.html", score = data)
