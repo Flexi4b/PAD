@@ -179,6 +179,7 @@ def admin():
 
 @app.route('/scoreboard')
 def scoreboard():
-    cursor.execute("SELECT `Speler`.`username`, `Score`.`score_challenge1`, `Score`.`score_challenge2`, `Score`.`score_challenge3`  FROM `pad`.`Score` INNER JOIN `pad`.`Speler` ON `>    data =cursor.fetchall()
+    cursor.execute("SELECT `Speler`.`username`, `Score`.`score_challenge1`, `Score`.`score_challenge2`, `Score`.`score_challenge3`  FROM `pad`.`Score` INNER JOIN `pad`.`Speler` ON `Score`.`spelerscore_id` = `Speler`.`speler_id`;")
+    data =cursor.fetchall()
 
     return render_template("scoreboard.html", score = data)
