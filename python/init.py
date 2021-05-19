@@ -5,6 +5,7 @@ from email.message import EmailMessage
 import random
 import string
 
+
 app=Flask(__name__)
 app.secret_key = 'Hacker420'
 
@@ -19,6 +20,7 @@ conn = mysql.connect()
 cursor = conn.cursor()
 
 display = []
+
 
 @app.route('/')
 def home():
@@ -105,15 +107,6 @@ def forget():
             s.login('syscribe@gmail.com', 'Hacker420')
             msg = EmailMessage()
             bericht = "here is a code to reset your passwoord: {}".format(code)
-            msg.set_content(bericht)
-            msg['Subject'] = 'password'
-            msg['From'] = 'Syscribe no-reply <syscribe@gmail.com>'
-            msg['To'] = email
-            s.send_message(msg)
-            s.quit()
-            return redirect(url_for('reset'))
-        return render_template("forget.html", msg ='There isn`t an username with this email.')
-    return render_template("forget.html")
 
 @app.route('/reset', methods=['GET', 'POST'])
 def reset():
@@ -153,7 +146,7 @@ def challenges():
         return render_template('challenges.html', button = 'logout', txt = 'Log out')
     return render_template('challenges.html', button = 'login', txt = 'Login')
 
-@app.route('/start_challenge1')
+@app.route('/start-challenge1')
 def start1():
     if session.get('challenge1') == True:
         return render_template('challenge1.html')
@@ -170,6 +163,13 @@ def challenge1():
        return render_template('challenge1.html')
     return redirect(url_for('challenges'))
 
+@app.route('/stop-challenge1')
+def stop1():
+    if session.get('challenge1') == True:
+       session.pop('challenge1', None)
+       return redirect(url_for('challenges'))
+    return redirect(url_for('login'))
+
 @app.route('/admin')
 def admin():
     if session.get('challenge1') == True:
@@ -177,9 +177,16 @@ def admin():
        return render_template('admin.html')
     return redirect(url_for('challenge1'))
 
+
 @app.route('/scoreboard')
 def scoreboard():
+    if session.get('challenge1') == True:
+        return redirect(url_for('challenge1'))
+    if session.get('loggedin') == True:
+        cursor.execute("SELECT `Speler`.`username`, `Score`.`score_challenge1`, `Score`.`score_challenge2`, `Score`.`score_challenge3`  FROM `pad`.`Score` INNER JOIN `pad`.`Speler` ON `Score`.`spelerscore_id` = `Speler`.`speler_id`;")
+        data =cursor.fetchall()
+        return render_template("scoreboard.html", score = data, button = 'logout', txt = 'Log out')
     cursor.execute("SELECT `Speler`.`username`, `Score`.`score_challenge1`, `Score`.`score_challenge2`, `Score`.`score_challenge3`  FROM `pad`.`Score` INNER JOIN `pad`.`Speler` ON `Score`.`spelerscore_id` = `Speler`.`speler_id`;")
     data =cursor.fetchall()
+    return render_template("scoreboard.html", score = data, button = 'login', txt = 'Login')
 
-    return render_template("scoreboard.html", score = data)

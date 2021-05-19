@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>SYSCRIBE</title>
+</head>
+
+<body>
+    <header>
+        <div id="hamburger" onclick="openFunction()">&#9776;</div>
+        <div id="menu" class="sidemenu">
+            <a href="{{ url_for('welkom') }}" id="actueel">HOME</a>
+            <a href="">SCOREBOARD</a>
+            <a href="{{ url_for('challenges') }}">CHALLENGES</a>
+            <a href="" class="closebtn" onclick="closeFunction()">&times;</a>
+        </div>
+        <pre class="logo-ascii">
+            ██████ ▓██   ██▓  ██████  ▄████▄   ██▀███   ██▓ ▄▄▄▄   ▓█████ 
+            ▒██    ▒  ▒██  ██▒▒██    ▒ ▒██▀ ▀█  ▓██ ▒ ██▒▓██▒▓█████▄ ▓█   ▀ 
+            ░ ▓██▄     ▒██ ██░░ ▓██▄   ▒▓█    ▄ ▓██ ░▄█ ▒▒██▒▒██▒ ▄██▒███   
+              ▒   ██▒  ░ ▐██▓░  ▒   ██▒▒▓▓▄ ▄██▒▒██▀▀█▄  ░██░▒██░█▀  ▒▓█  ▄ 
+            ▒██████▒▒  ░ ██▒▓░▒██████▒▒▒ ▓███▀ ░░██▓ ▒██▒░██░░▓█  ▀█▓░▒████▒
+            ▒ ▒▓▒ ▒ ░   ██▒▒▒ ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░░ ▒▓ ░▒▓░░▓  ░▒▓███▀▒░░ ▒░ ░
+            ░ ░▒  ░ ░ ▓██ ░▒░ ░ ░▒  ░ ░  ░  ▒     ░▒ ░ ▒░ ▒ ░▒░▒   ░  ░ ░  ░
+            ░  ░  ░   ▒ ▒ ░░  ░  ░  ░  ░          ░░   ░  ▒ ░ ░    ░    ░   
+                  ░   ░ ░           ░  ░ ░         ░      ░   ░         ░  ░
+                      ░ ░              ░                           ░        
+               
+        </pre>
+        <a href="{{ url_for('logout') }}" class="login" id="login-site">Logout</a>
+    </header>
+
+    <div class="login-container">
+
+        <div class="midden-scherm">
+            <h3>Congratulations!</h3>
+            <p>You found the admin page<p>
+        </div>
+</body>
+<script src="{{url_for('static', filename='javascript/sidebar.js') }}" type="text/javascript"></script>
+
+</html>

@@ -46,8 +46,6 @@ img {
     color: rgb(0, 0, 0);
 }
 
-
-
 .links{
     list-style-type: none;
     margin: 0;
@@ -83,14 +81,12 @@ footer {
     margin-top: 20px;
   }
 
-@media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {
       width: 100%;
       padding: 0;
     }
   }
-
-  /* button help */
 
 .btn{
     background-color: #525252;
@@ -103,6 +99,7 @@ footer {
     font-size: 16px;
     border-radius: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 /* The Modal (background) */
@@ -128,8 +125,8 @@ footer {
     width: 50%;
     border-radius: 10px;
   }
-  
-.options{
+
+  .options{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,3 +150,4 @@ footer {
     text-decoration: none;
     cursor: pointer;
   }
+

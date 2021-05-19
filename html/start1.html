@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
+        <title>SYSCRIBE</title>
+    </head>
+
+    <body>
+        <header>
+            <a href={{ button }} class="start-login" id="login-site">{{ txt }}</a>
+            <a href="{{ url_for('challenges') }}" class="return" id="return-start">&#8617;</a>            
+        </header>
+
+        <div class="midden-scherm">
+            <h1>Challenge 1</h1>
+            <br>
+            <p>We will focus on broken access control during this challenge. Let's start with the basics. </p>
+            <p>And just focus on finding an admin page. You will complete this challenge by finding that page. </p>
+            <p>Good luck and have fun!</p>
+            <br>
+            <br>
+            <p>{{ msg }} <p>
+            <br>
+            <a href={{ start }} class="start" id="startchallenge">Start</a>
+        </div>
+    </body>
+</html>

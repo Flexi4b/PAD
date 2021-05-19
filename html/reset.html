@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <title>SYSCRIBE</title>
+</head>
+<body>
+    <header>
+        <pre class="logo-reset">
+
+            ██████ ▓██   ██▓  ██████  ▄████▄   ██▀███   ██▓ ▄▄▄▄   ▓█████ 
+            ▒██    ▒  ▒██  ██▒▒██    ▒ ▒██▀ ▀█  ▓██ ▒ ██▒▓██▒▓█████▄ ▓█   ▀ 
+            ░ ▓██▄     ▒██ ██░░ ▓██▄   ▒▓█    ▄ ▓██ ░▄█ ▒▒██▒▒██▒ ▄██▒███   
+              ▒   ██▒  ░ ▐██▓░  ▒   ██▒▒▓▓▄ ▄██▒▒██▀▀█▄  ░██░▒██░█▀  ▒▓█  ▄ 
+            ▒██████▒▒  ░ ██▒▓░▒██████▒▒▒ ▓███▀ ░░██▓ ▒██▒░██░░▓█  ▀█▓░▒████▒
+            ▒ ▒▓▒ ▒ ░   ██▒▒▒ ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░░ ▒▓ ░▒▓░░▓  ░▒▓███▀▒░░ ▒░ ░
+            ░ ░▒  ░ ░ ▓██ ░▒░ ░ ░▒  ░ ░  ░  ▒     ░▒ ░ ▒░ ▒ ░▒░▒   ░  ░ ░  ░
+            ░  ░  ░   ▒ ▒ ░░  ░  ░  ░  ░          ░░   ░  ▒ ░ ░    ░    ░   
+                  ░   ░ ░           ░  ░ ░         ░      ░   ░         ░  ░
+                      ░ ░              ░                           ░        
+        </pre>
+    </header>
+    <div class="login-container">
+        <form method="POST" class="login-form">
+            <h1>Reset your Password<br></h1>
+            <p>{{ msg }}</p>
+            <input class="form-field" type="text" placeholder="Username" name="username" id="username" required>
+            <input class="form-field" type="text" placeholder="code" name="code" id="code" required>
+            <input class="form-field" type="password" placeholder="Password" name="password" id="password" required>
+            <input id="btn-submit" class="login-button" type="submit" value="submit">
+        </form>
+    </div>
+</body>
+</html>
